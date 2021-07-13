@@ -50,7 +50,7 @@ def group_population
   execute(<<-SQL)
   SELECT SUM(population)
   FROM countries
-  WHERE name IN ('France','Germany','Spain')
+  WHERE name IN ('France','Germany','Spain');
   SQL
 end
 
@@ -70,7 +70,7 @@ def populous_country_counts
   SELECT continent, COUNT(name)
   FROM countries
   WHERE population >= 10000000
-  GROUP BY continent
+  GROUP BY continent;
   SQL
 end
 
